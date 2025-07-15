@@ -1,0 +1,7 @@
+pre-commit:
+  jobs:
+    - name: Check for build errors
+      tags:
+        - build
+      run: bun run build
+      output: failure
