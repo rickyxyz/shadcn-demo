@@ -4,12 +4,12 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/shadcn-demo",
-});
+  base: command === "build" ? "/shadcn-demo" : "",
+}));
