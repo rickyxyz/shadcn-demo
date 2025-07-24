@@ -10,10 +10,7 @@ import { useState } from "react";
 import MemberDashboard from "./MemberDashboard";
 
 export default function Page() {
-  const adminDashboardState = useState(() => {
-    const path = window.location.pathname;
-    return !path.endsWith("/member");
-  });
+  const adminDashboardState = useState(true);
   const showAdmin = adminDashboardState[0];
 
   return (
