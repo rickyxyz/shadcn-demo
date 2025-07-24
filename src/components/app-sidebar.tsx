@@ -35,7 +35,7 @@ const data = {
   user: {
     name: "Amira Admin",
     email: "admin@amira.global",
-    avatar: "/avatars/amira.jpg",
+    avatar: "/shadcn-demo/avatars/amira.jpg",
   },
   navMain: [
     {
@@ -161,7 +161,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <a href="#">
                 {/* <IconInnerShadowTop className="!size-5" /> */}
-                <img src="/amira-logo.svg" alt="" className="size-5" />
+                <img
+                  src="/shadcn-demo/amira-logo.svg"
+                  alt=""
+                  className="size-5"
+                />
                 <span className="text-base font-semibold">Amira Global</span>
               </a>
             </SidebarMenuButton>
