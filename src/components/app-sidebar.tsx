@@ -50,7 +50,7 @@ const data = {
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
+      title: "Financials",
       url: "#",
       icon: IconChartBar,
     },
