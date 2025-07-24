@@ -402,7 +402,7 @@ export function DataTable({
       defaultValue="recent-project"
       className="w-full flex-col justify-start gap-6"
     >
-      <div className="flex items-center justify-between px-4 lg:px-6">
+      <div className="flex items-center justify-between">
         <Label htmlFor="view-selector" className="sr-only">
           View
         </Label>
@@ -417,17 +417,19 @@ export function DataTable({
           <SelectContent>
             <SelectItem value="recent-project">Recent Projects</SelectItem>
             <SelectItem value="recent-sponsorship-request">
-              Recent Sponsorship Requests
+              Open For Sponsorship Projects
             </SelectItem>
-            <SelectItem value="document">Documents</SelectItem>
+            <SelectItem value="document">New Documents</SelectItem>
           </SelectContent>
         </Select>
         <TabsList className="**:data-[slot=badge]:bg-muted-foreground/30 hidden **:data-[slot=badge]:size-5 **:data-[slot=badge]:rounded-full **:data-[slot=badge]:px-1 @4xl/main:flex">
           <TabsTrigger value="recent-project">Recent Projects</TabsTrigger>
           <TabsTrigger value="recent-sponsorship-request">
-            Recent Sponsorship Requests <Badge variant="secondary">4</Badge>
+            Open For Sponsorship Projects <Badge variant="secondary">4</Badge>
           </TabsTrigger>
-          <TabsTrigger value="document">Documents</TabsTrigger>
+          <TabsTrigger value="document">
+            New Documents <Badge variant="secondary">10</Badge>
+          </TabsTrigger>
         </TabsList>
         <div className="flex items-center gap-2">
           <DropdownMenu>
@@ -471,7 +473,7 @@ export function DataTable({
       </div>
       <TabsContent
         value="recent-project"
-        className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6"
+        className="relative flex flex-col gap-4 overflow-auto"
       >
         <div className="overflow-hidden rounded-lg border">
           <DndContext
@@ -530,8 +532,8 @@ export function DataTable({
         </div>
         <div className="flex items-center justify-between px-4">
           <div className="text-muted-foreground hidden flex-1 text-sm lg:flex">
-            {/* {table.getFilteredSelectedRowModel().rows.length} of{" "}
-            {table.getFilteredRowModel().rows.length} row(s) selected. */}
+            {/* {table.getFilteredSelectedRowModel().rows.length} of{" "} */}
+            {/* {table.getFilteredRowModel().rows.length} row(s) selected. */}
           </div>
           <div className="flex w-full items-center gap-8 lg:w-fit">
             <div className="hidden items-center gap-2 lg:flex">
